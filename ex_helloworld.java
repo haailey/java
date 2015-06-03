@@ -1,5 +1,5 @@
 
-public class HelloWorld 
+public class ex_helloworld
 {
 
 	public static void main(String[] args) 
