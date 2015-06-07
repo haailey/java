@@ -7,7 +7,7 @@
 - Restrict turns you can guess 
 
 ##Tutor
-
+![PIC](https://github.com/haailey/java/blob/master/pic/pic.png)
 ###Steps
 ###code
 ###refer
