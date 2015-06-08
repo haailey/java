@@ -16,15 +16,12 @@
 
 ####输入
 
-#####steps
+#####step 1
 - 百度了“java输入”，找到了Scanner类 [Scanner用法](file:///C:/Users/Hailey/Desktop/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%884%EF%BC%89_java%E4%B8%ADScanner%E7%9A%84%E7%94%A8%E6%B3%95%20-%20%E5%B9%BF%E5%9C%9F%E5%AD%90%E7%9A%84%E4%B8%93%E6%A0%8F%20-%20%E5%8D%9A%E5%AE%A2%E9%A2%91%E9%81%93%20-%20CSDN.NET.html)
 - 做了第一次尝试，
 
-'''
+'
 
-import java.util.Scanner; 
-public class Scanner
-{
 	public static void main(Strings[] args)
 	{
 		System.out.println("Please enter a number: ");
@@ -35,9 +32,24 @@ public class Scanner
 			System.out.println("True");
 		}
 	}
-}
+'
+- 尝试结果：失败； 
+	- 原因：没有看清楚up主写的是错的。
+#####step 2
+- 第二次尝试失败，因为string"s"拼写错误。
+- 注意文件名不能和已知或者已定义的名字重复。
+- 第二次尝试成功！！
 
-'''
+'
+
+	public static void main(Strings[] args)
+	{
+		Scanner in = new Scanner(System.in);
+		System.out.print("Please input a number: ");
+		int number = in.nextInt();
+		System.out.println(number);
+	}
+'
 ####随机数
 ####比较
 
