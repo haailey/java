@@ -5,10 +5,10 @@ public class GuessNumber
 	public static void main(String[] args)
 	{
 		while(true)
-		{
+		{			
+			Scanner s = new Scanner(System.in);
 			System.out.println("Welcome to Guess Number Game:");
 			System.out.println("Press 1 Begin 2 Exit");
-			Scanner s = new Scanner(System.in);
 			int ch = 0;
         	ch = s.nextInt();
         	if(ch==1)
@@ -24,35 +24,25 @@ public class GuessNumber
         			System.out.println("Please enter a number:");
         			input = ca.nextInt();
         			if(input < max)
+        			System.out.println("It's too low!");
+        			if(input > max)
+        			System.out.println("It's too high!");
+        			if(input==max)
         			{
-        				System.out.println("It's too low!");
-        				if(input > max)
+        				break;
+        				i++;
+        				While(i > 10);
+        				switch(i)
         				{
-        					System.out.println("It's too high!");
-        					{
-        						if(input==max)
-        						{
-        							break;
-        							{
-        								i++;
-        								while(i > 10);
-        								switch(i)
-        								{
-        									default: System.out.println("Sorry,you've used all your chances");
-											{
-												if(ch==2); {break;}
-												{
-													System.out.println("Thank you!");		
-												}
-											}
-        								}
-        							}
-        						}
-        					}
+        					default: System.out.println("Sorry,you've used all your chances");
+								{
+									if(ch==2); {break;}
+										{
+											System.out.println("Thank you!");}		
+        					    }
 						}
         			}
         		}
         	}
 		}	
 	}
-}
