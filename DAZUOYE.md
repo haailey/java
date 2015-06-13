@@ -50,9 +50,45 @@
 		System.out.println(number);
 	}
 '
-####随机数
-####比较
+#####step 3
+- 第三次尝试写代码，共用了Random和scanner和While函数
+- 参考 [Java-made-easy-GuessNumber](http://www.java-made-easy.com/guessing-game.html)
+- 第三次尝试成功
+- 代码如下：
 
+'
+
+	public static void main(Strings[] args)
+	{
+		Random read = new Random();
+		int numberToGuess = read.nextInt(100);
+		int numberOfTries = 0;
+		Scanner input = new Scanner(System.in);
+		int guess;
+		boolean win = false;
+
+		while (win == false)
+		{
+			System.out.println("Guess a number between 1 and 100: ");
+			guess = input.nextInt();
+			numberOfTries++;
+
+			if (guess == numberToGuess){
+				win = true;
+			}
+			else if (guess < numberToGuess){
+			System.out.println("Your guess is too low");
+			}
+			else if (guess > numberToGuess){
+				System.out.println("Your guess is too high");
+			}
+		}    
+
+		System.out.println("You win!");
+		System.out.println("The number was"+numberToGuess);
+		System.out.println("It took you"+numberOfTries+"tries");
+	}
+'
 
 
 
@@ -61,3 +97,5 @@
 
 [猜数字Java程序代码](http://wenku.baidu.com/link?url=DFmGdEUE0xrrO0i32U0VJureAVk8OJByqrvH_onROAuijcXVPnOLCW0-Bh5UbozGDCa3rc2TpoM2eV9Yyg__w0HN8RIBuWHii2SjQ89tYDK)
 
+
+##THE END

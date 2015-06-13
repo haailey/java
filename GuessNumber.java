@@ -1,48 +1,36 @@
 import java.util.Scanner;
-import java.lang.Math;
+import java.util.Random;
+
 public class GuessNumber
 {
 	public static void main(String[] args)
 	{
-		while(true)
-		{			
-			Scanner s = new Scanner(System.in);
-			System.out.println("Welcome to Guess Number Game:");
-			System.out.println("Press 1 Begin 2 Exit");
-			int ch = 0;
-        	ch = s.nextInt();
-        	if(ch==1)
-        	{
-        		System.out.println("--------------");
-        		Scanner ca = new Scanner(System.in);
-        		int max = 0;
-        		int input = 0;
-        		int i = 0;
-        		max = (int)(Math.random()*100);
-        		do
-        		{
-        			System.out.println("Please enter a number:");
-        			input = ca.nextInt();
-        			if(input < max)
-        			System.out.println("It's too low!");
-        			if(input > max)
-        			System.out.println("It's too high!");
-        			if(input==max)
-        			{
-        				break;
-        				i++;
-        				While(i > 10);
-        				switch(i)
-        				{
-        					default: System.out.println("Sorry,you've used all your chances");
-								{
-									if(ch==2); {break;}
-										{
-											System.out.println("Thank you!");}		
-        					    }
-						}
-        			}
-        		}
-        	}
-		}	
+		Random read = new Random();
+		int numberToGuess = read.nextInt(100);
+		int numberOfTries = 0;//create variables to track numbers.
+		Scanner input = new Scanner(System.in);
+		int guess;//create a variable that stores the input from the user
+		boolean win = false;//track whether or not the player has won
+
+		while (win == false)//while loop keeps going until a condition is no longer true
+		{
+			System.out.println("Guess a number between 1 and 100: ");
+			guess = input.nextInt();
+			numberOfTries++;
+
+			if (guess == numberToGuess){//if statement tells computer to tell us if this guess was too high or too low.
+				win = true;
+			}
+			else if (guess < numberToGuess){
+			System.out.println("Your guess is too low");
+			}
+			else if (guess > numberToGuess){
+				System.out.println("Your guess is too high");
+			}
+		}    
+
+		System.out.println("You win!");
+		System.out.println("The number was"+numberToGuess);
+		System.out.println("It took you"+numberOfTries+"tries");
 	}
+}
