@@ -7,7 +7,6 @@ public class GuessNumber
 	{
 		Random read = new Random();
 		double numberToGuess = read.nextInt(10);
-		double numberToGuess = (double)(Math.round(numberToGuess*100))/100;
 		int numberOfTries = 0;//create variables to track numbers.
 		Scanner input = new Scanner(System.in);
 		double guess;//create a variable that stores the input from the user
